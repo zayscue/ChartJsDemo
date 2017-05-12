@@ -1,17 +1,14 @@
 var Chart = require('chart.js');
-var _ = require('underscore');
 
 fetch('http://localhost:5000/api/projects-queries/active-per-office').then(function (response) {
     response.json().then(function (jsonArray) {
-        var labels = _.map(jsonArray, function(item) {
-            return 'Office ' + item['ecsOffice'];
-        });
-        var data = _.map(jsonArray, function(item) {
-            return item['activeProjects'];
-        });
+        var labels = new Array(jsonArray.length);
+        var data = new Array(jsonArray.length);
         var backgroundColors = new Array(jsonArray.length);
         var borderColors = new Array(jsonArray.length);
         for(var i = 0; i < jsonArray.length; i++) {
+            labels[i] = 'Office ' + jsonArray[i]['ecsOffice'];
+            data[i] = jsonArray[i]['activeProjects'];
             var r = Math.floor(Math.random() * 256);
             var g = Math.floor(Math.random() * 256);
             var b = Math.floor(Math.random() * 256);
