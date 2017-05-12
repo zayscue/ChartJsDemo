@@ -1,6 +1,6 @@
 var Chart = require('chart.js');
 
-fetch('http://localhost:5000/api/projects-queries/active-per-office').then(function (response) {
+fetch('http://desktop-2nh5jlv.ecslimited.com/api/projects-queries/active-per-office').then(function (response) {
     response.json().then(function (jsonArray) {
         var labels = new Array(jsonArray.length);
         var data = new Array(jsonArray.length);
