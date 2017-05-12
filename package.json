@@ -1,0 +1,15 @@
+{
+  "name": "chartjs_example",
+  "version": "1.0.0",
+  "description": "This is a demo of chart.js",
+  "main": "app.js",
+  "dependencies": {
+    "chart.js": "^2.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zackery Ayscue",
+  "license": "ISC"
+}
